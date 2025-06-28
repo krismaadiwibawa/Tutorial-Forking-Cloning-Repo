@@ -1,9 +1,0 @@
-/* Change title font size */
-.reveal h1.title {
-  font-size: 1.5em;
-}
-
-/* Change author font size */
-.reveal .quarto-title-author {
-  font-size: 0.75em;
-}

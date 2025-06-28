@@ -1,0 +1,99 @@
+
+
+# How to Fork a Repository and Create a Local Folder Mirroring the Repository on GitHub
+
+By creating a fork we are creating a clone of someone’s repo in our own
+GitHub. A fork is *static*. It only mirrors the state of the source repo
+at the time we create the fork.
+
+Let’s say we want to create a fork of this repo:
+<https://github.com/linushof/BayesIntro25>
+
+## Step 1: Create a fork of BayesIntro25 repo
+
+- Go to the repo.
+
+- Click the button ‘Fork’ and ‘Create a new fork’.
+
+  <img src="./Material/ForkButton.png" data-fig-align="center" />
+
+- We can name the fork as we want. It will not affect the source repo
+  because it is only a copy of the source repo.
+
+- Now we have a fork of the repo BayesIntro25 in our GitHub.
+
+  <br/><br/>
+
+## Step 2: Create a copy of our fork as a local folder in our laptop
+
+It is easier to interact with the files inside the fork through our
+local file system in our laptop or PC. To do this we can create a local
+folder that contains everything inside our fork.
+
+- Create a folder in our laptop/PC wherever we want
+
+- Copy the path to this folder. On Mac, right-click the folder and hold
+  the `option` button. Then click the `Copy "(folder name)" as Pathname`
+
+  <img src="./Material/CopyPath.png" data-fig-align="center"
+  width="300" />
+
+<!-- -->
+
+- Open `Terminal` and navigate to the folder by:
+  `cd (path to the folder)`
+
+- Once we navigated to the folder, clone our fork by:
+  `git clone (the https: of our fork) .`
+
+  The “.” means *copy everything inside the fork to this folder and do
+  not create a subfolder*
+
+- Now, our fork is set as the `origin` of our local folder.
+
+## Step 3: Set the source repo as upstream of our folder
+
+Now, we have set our fork as `origin`\` of our folder. But the fork is
+static and will not update any changes made in the source repo. To
+update our folder with the most recent changes in the source repo we
+must set the source repo as upstream.
+
+In Terminal:
+`git remote add upstream https://github.com/linushof/BayesIntro25.git`
+
+This set the source repo as upstream to our folder.
+
+To check if we have successfully set our fork as `origin` and our source
+repo as `upstream`: <br> `git remote -v`
+
+## Step 4: Update our local folder with the most recent changes of the source repo
+
+Everytime we want to update the folder,
+
+- first check if we already navigated to the
+  folder:<br>`cd (path to folder)`
+
+- Then, `git fetch upstream` to fetch the current state of the source
+  repo
+
+- Then, `git checkout main` to navigate to our ‘main’ branch of our
+  local folder
+
+<!-- -->
+
+- Then, `git merge upstream/main` to merge the current state of the
+  source repo with our local folder’s ‘main’ branch
+
+## Step 5: Push our updated folder to our fork
+
+- Now our local folder reflects the most recent state of the source
+  repo, but our fork doesn’t.
+
+- To push our local folder’s state to our
+  fork:<br>`git push origin main`
+
+- This basically push our local folder ‘main’ branch (because we are in
+  the ‘main’ branch of our local folder) into the ‘main’ branch of our
+  fork (here specified as origin).
+
+## Now our local folder and fork is up-to-date!

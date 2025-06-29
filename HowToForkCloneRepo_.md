@@ -104,11 +104,11 @@ everything inside our fork.
   The “.” means *copy everything inside the fork to this folder and do
   not create a subfolder*
 
-You can find the https of your fork by clicking the `Code` button in our
-fork page.
+  You can find the https of your fork by clicking the `Code` button in
+  our fork page.
 
-<img src="./Material/FindHttpsFork.png" data-fig-align="left"
-width="300" />
+  <img src="./Material/FindHttpsFork.png" data-fig-align="left"
+  width="300" />
 
 - Now, our fork is automatically set as the `origin` of our local
   folder. You can check this by using command `git remote -v` in

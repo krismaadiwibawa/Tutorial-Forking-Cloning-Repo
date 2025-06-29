@@ -53,7 +53,7 @@ So, it is important that our clone reflect the most current state of that repo.
 
 So, let's get started.
 
-<br/><br/>
+<br/>
 
 ## Step 1: Create a fork of BayesIntro25 repo
 
@@ -68,7 +68,7 @@ So, let's get started.
 
 -   Now we have a fork of the repo BayesIntro25 in our GitHub.
 
-    <br/><br/>
+    <br/>
 
 ## Step 2: Create a copy of our fork as a local folder in our laptop
 
@@ -83,8 +83,6 @@ To do this we can create a local folder that contains everything inside our fork
 
     ![](./Material/CopyPath.png){fig-align="center" width="300"}
 
-<!-- -->
-
 -   Open `Terminal` and navigate to the folder by: `cd (path to the folder)`
 
 -   Once we navigated to the folder, clone our fork by: `git clone (the https: of our fork) .`
@@ -97,7 +95,7 @@ You can find the https of your fork by clicking the `Code` button in our fork pa
 
 -   Now, our fork is automatically set as the `origin` of our local folder. You can check this by using command `git remote -v` in Terminal. The output should show that your origin is the https of your fork.
 
-<br/><br/>
+<br/>
 
 ## Step 3: Set the source repo as upstream of our folder
 
@@ -112,6 +110,8 @@ In Terminal use this command:
 This set the source repo as upstream to our clone folder.
 
 To check if we have successfully set our fork as `origin` and our source repo as `upstream`, again: <br> `git remote -v`
+
+<br/>
 
 ## Step 4: Update our local folder with the most recent changes of the source repo
 
@@ -139,7 +139,7 @@ Everytime we want to synchronize the folder with the source repo (upstream),
 
     ![](./Material/MergeUpstreamChart.jpg){fig-align="center" width="300"}
 
-    <br/><br/>
+    <br/>
 
 ## Step 5: Push our updated folder to our fork
 
@@ -148,5 +148,7 @@ Everytime we want to synchronize the folder with the source repo (upstream),
 -   To push our local folder's state to our fork:<br>`git push origin main`
 
 -   This basically pushes the commits in our local folder 'main' branch into the 'main' branch of our fork (here specified as origin).
+
+    <br/>
 
 ## Now our local folder and fork is up-to-date!

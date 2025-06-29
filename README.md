@@ -1,4 +1,3 @@
-# FORKING REPO
+# Forking and Cloning Repo
 
-This is a guide to fork a GitHub repo and make a local folder as a mirror
-of the source repo.
+This is a tutorial to fork and clone a GitHub repo.
